@@ -5,7 +5,7 @@ export default class Authorized extends Component {
     render() {
         return (
             <div>
-                { this.props.baseState.code != ''
+                { this.props.baseState.code !== ''
                     ?
                     <ListMeetings />
                     :
