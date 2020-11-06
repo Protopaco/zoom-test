@@ -2,14 +2,20 @@ import React, { Component } from 'react'
 import Login from './Login.js';
 import ListMeetings from './ListMeetings.js';
 export default class Authorized extends Component {
+
+    componentDidMount = async () => {
+        alert(this.props.baseState.code)
+    }
     render() {
         return (
             <div>
-                { this.props.baseState.code !== ''
-                    ?
-                    <ListMeetings />
-                    :
-                    <Login />
+                {
+                    this.props.baseState.code !== null
+                        ?
+                        <ListMeetings baseState={this.props.baseState}
+                        />
+                        :
+                        <Login />
                 }
 
 
