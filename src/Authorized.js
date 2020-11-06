@@ -3,9 +3,7 @@ import Login from './Login.js';
 import ListMeetings from './ListMeetings.js';
 export default class Authorized extends Component {
 
-    componentDidMount = async () => {
-        alert(this.props.baseState.code)
-    }
+
     render() {
         return (
             <div>
