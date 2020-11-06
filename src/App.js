@@ -8,7 +8,13 @@ import Authorized from './Authorized.js';
 import LandingPage from './LandingPage.js'
 
 export default class App extends Component {
+  state = {
+    code: ''
+  }
 
+  handleSetState = (stateObject) => {
+    this.setState(stateObject);
+  }
 
   render() {
     return (
@@ -18,12 +24,17 @@ export default class App extends Component {
             <Route
               path="/"
               exact
-              render={(routerProps) => <LandingPage {...routerProps} />}
+              render={(routerProps) => <LandingPage {...routerProps}
+                handleSetState={this.handleSetState}
+              />}
             />
             <Route
               path="/auth/"
               exact
-              render={(routerProps) => <Authorized {...routerProps} />}
+              render={(routerProps) => <Authorized {...routerProps}
+                baseState={this.state}
+
+              />}
             />
             {/* <Route
               path="/create"

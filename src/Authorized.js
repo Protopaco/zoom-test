@@ -5,6 +5,8 @@ export default class Authorized extends Component {
     render() {
         return (
             <div>
+                code:   {this.props.baseState.code}
+                <br />
                 'You're Authorized!'
                 <br />
                 <Link to="/">Landing</Link>
