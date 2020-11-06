@@ -5,6 +5,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import Authorized from './Authorized.js';
+import LandingPage from './LandingPage.js'
 
 export default class App extends Component {
 
@@ -14,6 +15,11 @@ export default class App extends Component {
       <div className="searchpage-main">
         <Router>
           <Switch>
+            <Route
+              path="/"
+              exact
+              render={(routerProps) => <LandingPage {...routerProps} />}
+            />
             <Route
               path="/auth/"
               exact
