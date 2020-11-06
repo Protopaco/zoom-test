@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-
+import Login from './Login.js';
+import ListMeetings from './ListMeetings.js';
 export default class Authorized extends Component {
     render() {
         return (
             <div>
-                code:   {this.props.baseState.code}
+                { this.props.baseState.code != ''
+                    ?
+                    <ListMeetings />
+                    :
+                    <Login />
+                }
+
+
+                {/* code:   {this.props.baseState.code}
                 <br />
                 'You're Authorized!'
                 <br />
-                <Link to="/">Landing</Link>
+                <Link to="/">Landing</Link> */}
             </div>
         )
     }
