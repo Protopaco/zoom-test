@@ -4,7 +4,7 @@ export default class Authorized extends Component {
     render() {
         return (
             <div>
-                'It worked!'
+                'You're Authorized!'
             </div>
         )
     }
