@@ -4,7 +4,8 @@ import fetch from 'superagent';
 export default class ListMeetings extends Component {
 
     componentDidMount = async () => {
-        const URL = `https://api.zoom.us/v2/users/{this.props.baseState.code}/recordings`;
+        // const URL = `https://api.zoom.us/v2/users/{this.props.baseState.code}/recordings`;
+        const URL = 'https://morning-dusk-56874.herokuapp.com/meetings';
         try {
             const returnObject = await fetch.get(URL);
             console.log(returnObject);
