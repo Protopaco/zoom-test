@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import fetch from 'superagent';
 
 
 export default class LandingPage extends Component {
@@ -11,7 +10,6 @@ export default class LandingPage extends Component {
         let code = new URLSearchParams(window.location.search);
         // this.setState({ code: code.get('code') })
         // `https://zoom.us/oauth/token?grant_type=authorization_code&code=${code.get('code)}&redirect_uri=https://determined-davinci-266c06.netlify.app/`
-
 
         this.props.handleSetState({ code: code.get('code') });
         this.props.history.push('/auth/');
