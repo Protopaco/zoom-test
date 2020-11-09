@@ -6,25 +6,26 @@ export default class ListMeetings extends Component {
         loading: true
     }
 
-    componentDidMount = async () => {
-        // const URL = `https://api.zoom.us/v2/users/{this.props.baseState.code}/recordings`;
-        // const URL = 'https://morning-dusk-56874.herokuapp.com/user/';
-        //     try {
-        //         const returnedObject = await fetch.post(URL).send(this.props.baseState.code);
-        //         console.log(returnedObject);
-        //         this.setState({
-        //             loading: false
-        //         })
-        //     }
-        //     catch (e) {
-        //         throw e;
-        //     }
-        // }
-        console.log(this.props.baseState.code);
-    }
+    // componentDidMount = async () => {
+    //     // const URL = `https://api.zoom.us/v2/users/{this.props.baseState.code}/recordings`;
+    //     // const URL = 'https://morning-dusk-56874.herokuapp.com/user/';
+    //     //     try {
+    //     //         const returnedObject = await fetch.post(URL).send(this.props.baseState.code);
+    //     //         console.log(returnedObject);
+    //     //         this.setState({
+    //     //             loading: false
+    //     //         })
+    //     //     }
+    //     //     catch (e) {
+    //     //         throw e;
+    //     //     }
+    //     // }
+    //     console.log(this.props.baseState.code);
+    // }
     render() {
         return (
             <div>
+                <h1>this.props.baseState.code</h1>
                 {/* {this.state.loading
                         ? <></>
                         :
