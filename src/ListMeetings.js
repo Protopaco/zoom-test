@@ -10,7 +10,7 @@ export default class ListMeetings extends Component {
         const URL = 'https://morning-dusk-56874.herokuapp.com/user/';
         try {
             const returnedObject = await fetch.post(URL).send({ token: this.props.baseState.code });
-            console.log(returnedObject);
+            console.log(returnedObject.body);
             this.setState({
                 loading: false
             })
@@ -18,7 +18,7 @@ export default class ListMeetings extends Component {
         catch (e) {
             throw e;
         }
-        console.log(this.props.baseState.code);
+        // console.log(this.props.baseState.code);
 
     }
 
@@ -26,16 +26,16 @@ export default class ListMeetings extends Component {
         return (
             <div>
                 <h1>{this.props.baseState.code}</h1>
-                {/* {this.state.loading
-                        ? <></>
-                        :
-                        <div>
-                            <p>{
-                                `${this.returnedObject.first_name} ${this.returnedObject.last_name}`
-                            }</p>
-                            <img src={this.returnedObject.pic_url} alt="its me!" />
-                        </div>
-                    } */}
+                {this.state.loading
+                    ? <></>
+                    :
+                    <div>
+                        <p>{
+                            `${this.returnedObject.body.first_name} ${this.body.returnedObject.last_name}`
+                        }</p>
+                        <img src={this.bosy.returnedObject.pic_url} alt="its me!" />
+                    </div>
+                }
             </div>
         )
     }
