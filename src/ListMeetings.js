@@ -25,7 +25,7 @@ export default class ListMeetings extends Component {
     render() {
         return (
             <div>
-                <h1>this.props.baseState.code</h1>
+                <h1>{this.props.baseState.code}</h1>
                 {/* {this.state.loading
                         ? <></>
                         :
