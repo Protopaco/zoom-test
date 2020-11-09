@@ -1,27 +1,27 @@
 import React, { Component } from 'react'
-// import fetch from 'superagent';
+import fetch from 'superagent';
 
 export default class ListMeetings extends Component {
     state = {
         loading: true
     }
 
-    // componentDidMount = async () => {
-    //     // const URL = `https://api.zoom.us/v2/users/{this.props.baseState.code}/recordings`;
-    //     // const URL = 'https://morning-dusk-56874.herokuapp.com/user/';
-    //     //     try {
-    //     //         const returnedObject = await fetch.post(URL).send(this.props.baseState.code);
-    //     //         console.log(returnedObject);
-    //     //         this.setState({
-    //     //             loading: false
-    //     //         })
-    //     //     }
-    //     //     catch (e) {
-    //     //         throw e;
-    //     //     }
-    //     // }
-    //     console.log(this.props.baseState.code);
-    // }
+    componentDidMount = async () => {
+        const URL = 'https://morning-dusk-56874.herokuapp.com/user/';
+        try {
+            const returnedObject = await fetch.post(URL).send({ token: this.props.baseState.code });
+            console.log(returnedObject);
+            this.setState({
+                loading: false
+            })
+        }
+        catch (e) {
+            throw e;
+        }
+        console.log(this.props.baseState.code);
+
+    }
+
     render() {
         return (
             <div>
