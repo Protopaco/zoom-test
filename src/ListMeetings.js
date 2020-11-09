@@ -3,7 +3,8 @@ import fetch from 'superagent';
 
 export default class ListMeetings extends Component {
     state = {
-        loading: true
+        loading: true,
+        returnedObject: {}
     }
 
     componentDidMount = async () => {
@@ -12,6 +13,7 @@ export default class ListMeetings extends Component {
             const returnedObject = await fetch.post(URL).send({ token: this.props.baseState.code });
             console.log(returnedObject.body);
             this.setState({
+                returnedObject: returnedObject.body,
                 loading: false
             })
         }
@@ -31,9 +33,9 @@ export default class ListMeetings extends Component {
                     :
                     <div>
                         <p>{
-                            `${this.returnedObject.body.first_name} ${this.body.returnedObject.last_name}`
+                            `${this.state.returnedObject.first_name} ${this.state.returnedObject.last_name}`
                         }</p>
-                        <img src={this.bosy.returnedObject.pic_url} alt="its me!" />
+                        <img src={this.state.returnedObject.pic_url} alt="its me!" />
                     </div>
                 }
             </div>
