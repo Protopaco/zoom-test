@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import fetch from 'superagent';
+// import fetch from 'superagent';
 
 export default class ListMeetings extends Component {
     state = {
@@ -8,7 +8,7 @@ export default class ListMeetings extends Component {
 
     componentDidMount = async () => {
         // const URL = `https://api.zoom.us/v2/users/{this.props.baseState.code}/recordings`;
-        const URL = 'https://morning-dusk-56874.herokuapp.com/user/';
+        // const URL = 'https://morning-dusk-56874.herokuapp.com/user/';
         //     try {
         //         const returnedObject = await fetch.post(URL).send(this.props.baseState.code);
         //         console.log(returnedObject);
@@ -21,10 +21,11 @@ export default class ListMeetings extends Component {
         //     }
         // }
         console.log(this.props.baseState.code);
-        render() {
-            return (
-                <div>
-                    {this.state.loading
+    }
+    render() {
+        return (
+            <div>
+                {/* {this.state.loading
                         ? <></>
                         :
                         <div>
@@ -33,8 +34,8 @@ export default class ListMeetings extends Component {
                             }</p>
                             <img src={this.returnedObject.pic_url} alt="its me!" />
                         </div>
-                    }
-                </div>
-            )
-        }
+                    } */}
+            </div>
+        )
     }
+}
